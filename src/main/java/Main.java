@@ -18,7 +18,8 @@ public class Main extends Application {
         window = primaryStage;
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("apiCheck.fxml"));
         window.setTitle("Hello World");
-        window.setScene(new Scene(root, 500, 500));
+        window.setScene(new Scene(root, 543, 473));
+        window.setResizable(false);
         window.show();
     }
 

@@ -13,7 +13,15 @@ import java.io.File;
 public class controller {
 
     @FXML
+    private TextArea upcTextArea;
+
+    @FXML
     private Label sourceLabel;
+
+    @FXML
+    private File sourceFolderPath;
+
+
 
     @FXML
     public void openSourceFolder() {
@@ -22,14 +30,25 @@ public class controller {
 
     @FXML
     public void locateFile(ActionEvent event) {
-        /**
-        FileChooser chooser = new FileChooser();
-        chooser.setTitle("Open File");
-        File file = chooser.showOpenDialog(new Stage());
-         */
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Open Resource File");
-        fileChooser.showOpenDialog(new Stage());
+        this.sourceFolderPath = fileChooser.showOpenDialog(new Stage());
+
+        //TODO
+        //handle cancel option!!
+        if(this.sourceFolderPath != null){
+            this.sourceLabel.setText(this.sourceFolderPath.getAbsolutePath().toString());
+        }
+
+
+    }
+
+    @FXML
+    public void clearTextArea(){
+
+        this.upcTextArea.clear();
+
+
     }
 
 
