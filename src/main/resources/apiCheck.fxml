@@ -44,7 +44,7 @@
                <children>
                   <Button mnemonicParsing="false" onAction="#locateFile" text="Source">
                      <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </Button>
                   <Label fx:id="sourceLabel" prefHeight="36.0" prefWidth="430.0" HBox.hgrow="NEVER" />
@@ -52,9 +52,9 @@
             </HBox>
             <HBox prefHeight="47.0" prefWidth="543.0" VBox.vgrow="NEVER">
                <children>
-                  <Label text="UPC">
+                  <Label text="Artists">
                      <HBox.margin>
-                        <Insets left="65.0" />
+                        <Insets bottom="5.0" left="65.0" />
                      </HBox.margin>
                   </Label>
                </children>
@@ -71,7 +71,7 @@
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </padding>
          <BorderPane.margin>
-            <Insets left="5.0" />
+            <Insets bottom="5.0" left="5.0" />
          </BorderPane.margin>
       </TextArea>
    </left>
@@ -86,7 +86,7 @@
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <Button cancelButton="true" layoutX="14.0" layoutY="290.0" mnemonicParsing="false" onAction="#clearTextArea" prefHeight="27.0" prefWidth="59.0" text="Clear" />
-            <Button defaultButton="true" layoutX="14.0" layoutY="41.0" mnemonicParsing="false" text="CHECK" />
+            <Button defaultButton="true" layoutX="14.0" layoutY="41.0" mnemonicParsing="false" onAction="#checkApiArtists" text="CHECK" />
          </children>
       </AnchorPane>
    </center>
