@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="543.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="543.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller">
    <top>
       <VBox prefHeight="83.0" prefWidth="552.0" BorderPane.alignment="CENTER">
          <children>
@@ -66,7 +66,7 @@
       </VBox>
    </top>
    <left>
-      <TextArea fx:id="upcTextArea" maxHeight="-Infinity" prefHeight="340.0" prefWidth="162.0" BorderPane.alignment="CENTER">
+      <TextArea fx:id="artistsTextArea" maxHeight="-Infinity" prefHeight="340.0" prefWidth="162.0" BorderPane.alignment="CENTER">
          <padding>
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </padding>

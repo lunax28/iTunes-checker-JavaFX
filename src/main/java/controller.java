@@ -16,6 +16,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
+import static java.lang.System.lineSeparator;
+
 
 public class controller {
 
@@ -63,6 +65,24 @@ public class controller {
     @FXML
     public void checkApiArtists(){
 
+        if(this.artistsTextArea.getText().isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning!");
+            alert.setContentText("You have not inserted any name!");
+            alert.showAndWait();
+
+            return;
+        } else if (this.sourceLabel.getText().isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning!");
+            alert.setContentText("You have not selected the destination file!");
+            alert.showAndWait();
+            return;
+        }
+
+
+
+
         iTunesApi apiClass = new iTunesApi();
         String link = "";
 
@@ -83,7 +103,7 @@ public class controller {
 
             while (scanner.hasNextLine()) {
                 tmp = scanner.nextLine();
-                tmpFormat = String.format("%10s", tmp).replace(' ', '+');
+                tmpFormat = String.format("%s", tmp).replace(' ', '+');
                 link = ("https://itunes.apple.com/search?term=" + tmpFormat + "&entity=allArtist&attribute=allArtistTerm");
                 System.out.println("LINK: " + link);
                 JsonObject json = apiClass.getJson(link);
@@ -148,7 +168,7 @@ public class controller {
 
                 //}
 
-                bw.write(tmp + "," + checkEquality + "\n");
+                bw.write(tmp + "," + checkEquality + lineSeparator());
 
             }
 
@@ -179,8 +199,8 @@ public class controller {
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information Dialog");
-        alert.setHeaderText("Look, an Information Dialog");
-        alert.setContentText("I have a great message for you!");
+        alert.setHeaderText("DONE!");
+        alert.setContentText("The results are saved in your .txt file!");
 
         alert.showAndWait();
 

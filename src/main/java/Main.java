@@ -17,7 +17,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         window = primaryStage;
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("apiCheck.fxml"));
-        window.setTitle("Hello World");
+        window.setTitle("iTunes Checker");
         window.setScene(new Scene(root, 543, 473));
         window.setResizable(false);
         window.show();
